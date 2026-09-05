@@ -61,6 +61,9 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --color-pink: var(--pink);
+  --color-peach: var(--peach);
+  --color-lilac: var(--lilac);
 }
 
 :root {
@@ -74,6 +77,9 @@
   --primary: oklch(0.76 0.15 349.5);
   --primary-foreground: oklch(1 0 0);
   --primary-shadow: oklch(0.62 0.16 355 / 0.5);
+  --pink: oklch(0.89 0.075 348);
+  --peach: oklch(0.9 0.095 67);
+  --lilac: oklch(0.88 0.065 303);
   --secondary: oklch(0.91 0.065 231.5);
   --secondary-foreground: oklch(0.35 0.065 305.5);
   --muted: oklch(0.925 0.016 305.5);

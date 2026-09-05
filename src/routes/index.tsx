@@ -14,7 +14,7 @@ import {
   UserRound,
   UsersRound,
   WandSparkles,
-  World,
+  Globe2,
 } from "lucide-react";
 import { useState } from "react";
 
@@ -42,7 +42,7 @@ const sections = [
   { label: "Dàn ý", icon: ListTree },
   { label: "Đánh giá", icon: Star },
   { label: "Nhân vật", icon: UsersRound },
-  { label: "Thế giới", icon: World },
+  { label: "Thế giới", icon: Globe2 },
   { label: "Dòng thời gian", icon: Clock3 },
 ];
 
