@@ -22,7 +22,7 @@ export const Route = createFileRoute("/chuong")({
 
 function ChaptersPage() {
   const [activeChapter, setActiveChapter] = useState(12);
-  const current = chapters.find((chapter) => chapter.no === activeChapter) ?? chapters[chapters.length - 1];
+  const current = chapters.find((chapter) => chapter.no === activeChapter) ?? chapters[chapters.length - 1]!;
 
   return (
     <StudioShell

@@ -10,33 +10,128 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ChuongRouteImport } from './routes/chuong'
+import { Route as DanYRouteImport } from './routes/dan-y'
+import { Route as DanhGiaRouteImport } from './routes/danh-gia'
+import { Route as DongThoiGianRouteImport } from './routes/dong-thoi-gian'
+import { Route as NhanVatRouteImport } from './routes/nhan-vat'
+import { Route as SoanThaoRouteImport } from './routes/soan-thao'
+import { Route as TheGioiRouteImport } from './routes/the-gioi'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ChuongRoute = ChuongRouteImport.update({
+  id: '/chuong',
+  path: '/chuong',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DanYRoute = DanYRouteImport.update({
+  id: '/dan-y',
+  path: '/dan-y',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DanhGiaRoute = DanhGiaRouteImport.update({
+  id: '/danh-gia',
+  path: '/danh-gia',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DongThoiGianRoute = DongThoiGianRouteImport.update({
+  id: '/dong-thoi-gian',
+  path: '/dong-thoi-gian',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NhanVatRoute = NhanVatRouteImport.update({
+  id: '/nhan-vat',
+  path: '/nhan-vat',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SoanThaoRoute = SoanThaoRouteImport.update({
+  id: '/soan-thao',
+  path: '/soan-thao',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TheGioiRoute = TheGioiRouteImport.update({
+  id: '/the-gioi',
+  path: '/the-gioi',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/chuong': typeof ChuongRoute
+  '/dan-y': typeof DanYRoute
+  '/danh-gia': typeof DanhGiaRoute
+  '/dong-thoi-gian': typeof DongThoiGianRoute
+  '/nhan-vat': typeof NhanVatRoute
+  '/soan-thao': typeof SoanThaoRoute
+  '/the-gioi': typeof TheGioiRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/chuong': typeof ChuongRoute
+  '/dan-y': typeof DanYRoute
+  '/danh-gia': typeof DanhGiaRoute
+  '/dong-thoi-gian': typeof DongThoiGianRoute
+  '/nhan-vat': typeof NhanVatRoute
+  '/soan-thao': typeof SoanThaoRoute
+  '/the-gioi': typeof TheGioiRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/chuong': typeof ChuongRoute
+  '/dan-y': typeof DanYRoute
+  '/danh-gia': typeof DanhGiaRoute
+  '/dong-thoi-gian': typeof DongThoiGianRoute
+  '/nhan-vat': typeof NhanVatRoute
+  '/soan-thao': typeof SoanThaoRoute
+  '/the-gioi': typeof TheGioiRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/chuong'
+    | '/dan-y'
+    | '/danh-gia'
+    | '/dong-thoi-gian'
+    | '/nhan-vat'
+    | '/soan-thao'
+    | '/the-gioi'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/chuong'
+    | '/dan-y'
+    | '/danh-gia'
+    | '/dong-thoi-gian'
+    | '/nhan-vat'
+    | '/soan-thao'
+    | '/the-gioi'
+  id:
+    | '__root__'
+    | '/'
+    | '/chuong'
+    | '/dan-y'
+    | '/danh-gia'
+    | '/dong-thoi-gian'
+    | '/nhan-vat'
+    | '/soan-thao'
+    | '/the-gioi'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ChuongRoute: typeof ChuongRoute
+  DanYRoute: typeof DanYRoute
+  DanhGiaRoute: typeof DanhGiaRoute
+  DongThoiGianRoute: typeof DongThoiGianRoute
+  NhanVatRoute: typeof NhanVatRoute
+  SoanThaoRoute: typeof SoanThaoRoute
+  TheGioiRoute: typeof TheGioiRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +143,67 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/chuong': {
+      id: '/chuong'
+      path: '/chuong'
+      fullPath: '/chuong'
+      preLoaderRoute: typeof ChuongRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dan-y': {
+      id: '/dan-y'
+      path: '/dan-y'
+      fullPath: '/dan-y'
+      preLoaderRoute: typeof DanYRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/danh-gia': {
+      id: '/danh-gia'
+      path: '/danh-gia'
+      fullPath: '/danh-gia'
+      preLoaderRoute: typeof DanhGiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dong-thoi-gian': {
+      id: '/dong-thoi-gian'
+      path: '/dong-thoi-gian'
+      fullPath: '/dong-thoi-gian'
+      preLoaderRoute: typeof DongThoiGianRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/nhan-vat': {
+      id: '/nhan-vat'
+      path: '/nhan-vat'
+      fullPath: '/nhan-vat'
+      preLoaderRoute: typeof NhanVatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/soan-thao': {
+      id: '/soan-thao'
+      path: '/soan-thao'
+      fullPath: '/soan-thao'
+      preLoaderRoute: typeof SoanThaoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/the-gioi': {
+      id: '/the-gioi'
+      path: '/the-gioi'
+      fullPath: '/the-gioi'
+      preLoaderRoute: typeof TheGioiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ChuongRoute: ChuongRoute,
+  DanYRoute: DanYRoute,
+  DanhGiaRoute: DanhGiaRoute,
+  DongThoiGianRoute: DongThoiGianRoute,
+  NhanVatRoute: NhanVatRoute,
+  SoanThaoRoute: SoanThaoRoute,
+  TheGioiRoute: TheGioiRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
