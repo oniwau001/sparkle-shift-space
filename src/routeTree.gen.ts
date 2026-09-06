@@ -17,6 +17,7 @@ import { Route as DongThoiGianRouteImport } from './routes/dong-thoi-gian'
 import { Route as NhanVatRouteImport } from './routes/nhan-vat'
 import { Route as SoanThaoRouteImport } from './routes/soan-thao'
 import { Route as TheGioiRouteImport } from './routes/the-gioi'
+import { Route as TieuThuyetMoiRouteImport } from './routes/tieu-thuyet-moi'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -58,6 +59,11 @@ const TheGioiRoute = TheGioiRouteImport.update({
   path: '/the-gioi',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TieuThuyetMoiRoute = TieuThuyetMoiRouteImport.update({
+  id: '/tieu-thuyet-moi',
+  path: '/tieu-thuyet-moi',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -68,6 +74,7 @@ export interface FileRoutesByFullPath {
   '/nhan-vat': typeof NhanVatRoute
   '/soan-thao': typeof SoanThaoRoute
   '/the-gioi': typeof TheGioiRoute
+  '/tieu-thuyet-moi': typeof TieuThuyetMoiRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -78,6 +85,7 @@ export interface FileRoutesByTo {
   '/nhan-vat': typeof NhanVatRoute
   '/soan-thao': typeof SoanThaoRoute
   '/the-gioi': typeof TheGioiRoute
+  '/tieu-thuyet-moi': typeof TieuThuyetMoiRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -89,6 +97,7 @@ export interface FileRoutesById {
   '/nhan-vat': typeof NhanVatRoute
   '/soan-thao': typeof SoanThaoRoute
   '/the-gioi': typeof TheGioiRoute
+  '/tieu-thuyet-moi': typeof TieuThuyetMoiRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -101,6 +110,7 @@ export interface FileRouteTypes {
     | '/nhan-vat'
     | '/soan-thao'
     | '/the-gioi'
+    | '/tieu-thuyet-moi'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -111,6 +121,7 @@ export interface FileRouteTypes {
     | '/nhan-vat'
     | '/soan-thao'
     | '/the-gioi'
+    | '/tieu-thuyet-moi'
   id:
     | '__root__'
     | '/'
@@ -121,6 +132,7 @@ export interface FileRouteTypes {
     | '/nhan-vat'
     | '/soan-thao'
     | '/the-gioi'
+    | '/tieu-thuyet-moi'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -132,6 +144,7 @@ export interface RootRouteChildren {
   NhanVatRoute: typeof NhanVatRoute
   SoanThaoRoute: typeof SoanThaoRoute
   TheGioiRoute: typeof TheGioiRoute
+  TieuThuyetMoiRoute: typeof TieuThuyetMoiRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -192,6 +205,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TheGioiRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tieu-thuyet-moi': {
+      id: '/tieu-thuyet-moi'
+      path: '/tieu-thuyet-moi'
+      fullPath: '/tieu-thuyet-moi'
+      preLoaderRoute: typeof TieuThuyetMoiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -204,6 +224,7 @@ const rootRouteChildren: RootRouteChildren = {
   NhanVatRoute: NhanVatRoute,
   SoanThaoRoute: SoanThaoRoute,
   TheGioiRoute: TheGioiRoute,
+  TieuThuyetMoiRoute: TieuThuyetMoiRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

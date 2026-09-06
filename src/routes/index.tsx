@@ -25,10 +25,12 @@ function LibraryPage() {
       eyebrow="Không gian sáng tác"
       title="Thư viện tiểu thuyết"
       actions={
-        <Button variant="studio">
-          <Plus />
-          Tiểu thuyết mới
-        </Button>
+        <Link to="/tieu-thuyet-moi">
+          <Button variant="studio">
+            <Plus />
+            Tiểu thuyết mới
+          </Button>
+        </Link>
       }
     >
       <div className="mt-7 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">

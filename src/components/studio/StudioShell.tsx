@@ -57,10 +57,12 @@ export function StudioShell({ eyebrow, title, actions, children }: ShellProps) {
             )}
           </Link>
 
-          <Button variant="studio" className="mt-7 w-full" aria-label="Tạo tiểu thuyết mới">
-            <Plus />
-            {!collapsed && "Tiểu thuyết mới"}
-          </Button>
+          <Link to="/tieu-thuyet-moi" className="block">
+            <Button variant="studio" className="mt-7 w-full" aria-label="Tạo tiểu thuyết mới">
+              <Plus />
+              {!collapsed && "Tiểu thuyết mới"}
+            </Button>
+          </Link>
 
           <nav className="mt-6 space-y-1.5 text-sm font-semibold" aria-label="Không gian sáng tác">
             {nav.map(({ label, icon: Icon, to }) => {
